@@ -7,6 +7,8 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import Link from "next/link";
+import { Button } from "@mui/material";
 
 function createData(
   name: string,
@@ -62,6 +64,7 @@ export default function BasicTable() {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
+            <TableCell align="center">Detalles</TableCell>
             <TableCell>Nombre</TableCell>
             <TableCell align="center">Email</TableCell>
             <TableCell align="center">Telefono</TableCell>
@@ -75,9 +78,16 @@ export default function BasicTable() {
               key={row.name}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
+              <TableCell align="left">
+                <Button variant="contained">
+                  <Link href={`/clientes/${10}`}>Ver</Link>
+                </Button>
+              </TableCell>
+
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
+
               <TableCell align="right">{row.email}</TableCell>
               <TableCell align="right">{row.phone}</TableCell>
               <TableCell align="right">{row.address}</TableCell>

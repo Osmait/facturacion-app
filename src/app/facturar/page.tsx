@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 export default function page() {
   return (
     <div className={styles.contenedor}>
-      <h1>Check In</h1>
+      <h1>Facturar</h1>
       <FormCheckIn />
     </div>
   );
