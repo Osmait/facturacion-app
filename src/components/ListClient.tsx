@@ -10,7 +10,9 @@ export const ListClient = () => {
   return (
     <>
       <Link href={"/clientes/add"}>
-        <Button variant="contained">Agregar cliente</Button>
+        <Button variant="contained" style={{ margin: "10px" }}>
+          Agregar cliente
+        </Button>
       </Link>
       <BasicTable />;
     </>
